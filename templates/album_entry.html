@@ -12,12 +12,6 @@
 <form action="{{url_for('show_answers')}}" method="POST">
   {{ form.hidden_tag() }}
   {{ form.name.label }} {{ form.name() }}<br>
-  {% for subfield in form.ranking %}
-    <tr>
-        <td>{{ subfield }}</td>
-        <td>{{ subfield.label }}</td>
-    </tr>
-{% endfor %}
   {{ form.ranking.label }} {{ form.ranking() }}<br>
   {{ form.submit() }}<br>
 </form>

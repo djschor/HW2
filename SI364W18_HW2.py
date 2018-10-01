@@ -32,7 +32,7 @@ app.debug=True
 
 class AlbumEntryForm(FlaskForm):
     name = StringField("Enter the name of an album: ", validators=[Required(),Length(3,64)]) # Must be at least 3 and no more than 64 chars
-    ranking = RadioField('How much do you like the album? (1 low, 3 high)', choices = ['1', '2', '3'])
+    ranking = RadioField('How much do you like the album? (1 low, 3 high)', choices = [('1', '1'), ('2', '2'), ('3','3')])
     submit = SubmitField("Submit")
 
 ####################
